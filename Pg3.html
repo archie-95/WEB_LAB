@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="demo">lol</p>
+        <script>
+           var var1 = setInterval(inTimer, 1000);
+            var fs = 5;
+            var ids = document.getElementById("demo");
+            function inTimer()
+            {
+                ids.innerHTML="TEXT GROWING";
+                ids.setAttribute('style',"font-size:"+fs+"px ;color:red");
+                fs+=5;
+                if(fs>20)
+                {
+                    clearInterval(var1);
+                    var var2=setInterval(deTimer,1000);
+                }
+
+            }
+            function deTimer(){
+                ids.innerHTML="TEXT shrinking";
+                ids.setAttribute('style',"font-size:"+fs+"px ;color:red");
+                fs-=5;
+                if(f<5)
+                {
+                    clearInterval(var2);
+                }
+
+            }
+        </script>
+    </body>
+</html>

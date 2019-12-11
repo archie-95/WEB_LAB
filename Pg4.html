@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            var str=prompt("enter input","");
+            if(!isNaN(str))
+            {
+                var num=parseInt(str)
+                var rem,ans=0;
+                while(num>0)
+                {
+                    rem=parseInt(num%10);
+                    ans=ans*10+rem;
+                    num=parseInt(num/10);
+                }
+                alert("the reverse is"+ans+" ");
+            }
+            else{
+                str=str.toUpperCase();
+                for(var i=0;i<str.length;i++)
+                {
+                    var ch=str.charAt(i);
+                    if(ch=='A'||ch=='E'||ch=='I'||ch=='o'||ch=='U')
+                        break;
+                }
+                if(i<str.length)
+                {
+                    alert("the First Vowel is "+ch);
+                }
+                else{
+                    alert("NO vowel is present");
+
+                }
+            }
+        </script>
+    </body>
+</html>
